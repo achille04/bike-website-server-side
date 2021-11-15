@@ -6,9 +6,8 @@ require('dotenv').config();
 const { MongoClient } = require('mongodb');
 const port = process.env.PORT || 5000;
 
-// best-bike-firebase-adminsdk.json
 
-const serviceAccount = require('./best-bike-firebase-adminsdk.json');
+const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
