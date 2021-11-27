@@ -13,7 +13,6 @@ admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
 });
 
-
 app.use(cors())
 app.use(express.json())
 
@@ -155,10 +154,12 @@ app.listen(port, () => {
   console.log(`listening at ${port}`)
 })
 
+
+
 // app.get('/users')
 // app.post('/users')
 // app.get('/users/:id')
 // app.put('/users/:id')
 // app.delete('/users/:id')
 // users: get
-// users: post
+// users: posts
